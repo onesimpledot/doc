@@ -1,0 +1,7 @@
+rv-bind-content
+  template
+    rv-example-tabs(handle="leaflet")
+      template(title="Source", type="source")
+        include:prismjs(language = 'html') ../../../../demos/leaflet-map/src/ts/components/leaflet-example/leaflet-example.component.html
+      template(title="Preview", type="preview")
+        leaflet-example

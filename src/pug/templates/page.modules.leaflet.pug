@@ -1,0 +1,8 @@
+extends ../_extends/generated-page.pug
+
+block content
+  section
+    h2 Map
+    include:markdown-it(html) ../../../doc/reference/leaflet/leaflet.md
+    include ../../../doc/demos/leaflet
+    

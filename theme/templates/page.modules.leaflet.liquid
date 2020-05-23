@@ -1,0 +1,120 @@
+
+<div class="container py-5 page {{template|handleize}}" id="page-content-{{page.handle}}">
+  <div class="row pt-5">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="page-title">{{ page.title }}
+          </h1>
+          <div class="rte">{{ page.content }}</div>
+          <div class="content">
+            <bs4-contents class="d-block d-lg-none top-contents" header-parent-selector="#main-container" headers-start="2" headers-depth="4" scroll-offset="80"></bs4-contents>
+            <section>
+              <h2>Map</h2><p>If needed, one may use the <code>&lt;leaflet-map&gt;</code> component of riba to display a map. It embeds a preconfigured leaflet.js map, which can be altered trough the given template or via its parameters.</p>
+<p>Currently there are two different html tags, the template may contain:</p>
+<p><code>&lt;icon&gt;</code>:</p>
+<p>The icon element represents a custom icon that can be used by a marker in the map.</p>
+<p>Required arguments are:</p>
+<table>
+<thead>
+<tr>
+<th>argument</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>Name to go by</td>
+</tr>
+<tr>
+<td>icon-url</td>
+<td>Url of the icon</td>
+</tr>
+<tr>
+<td>shadow-url</td>
+<td>Url of the icon shadow</td>
+</tr>
+<tr>
+<td>icon-size</td>
+<td>Pixel in the form of: <code>x, y</code></td>
+</tr>
+<tr>
+<td>icon-anchor</td>
+<td>Pixel in the form of: <code>x, y</code></td>
+</tr>
+<tr>
+<td>shadow-size</td>
+<td>Pixel in the form of: <code>x, y</code></td>
+</tr>
+<tr>
+<td>popup-anchor</td>
+<td>Pixel in the form of: <code>x, y</code></td>
+</tr>
+<tr>
+<td>shadow-anchor</td>
+<td>Pixel in the form of: <code>x, y</code></td>
+</tr>
+</tbody>
+</table>
+<h3><code>&lt;marker&gt;</code>:</h3>
+<p>The marker element represents a marker on the map.</p>
+<p>Available arguments are:</p>
+<table>
+<thead>
+<tr>
+<th>argument</th>
+<th>description</th>
+<th>required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lat</td>
+<td></td>
+<td>:heavy_check_mark:</td>
+</tr>
+<tr>
+<td>lng</td>
+<td></td>
+<td>:heavy_check_mark:</td>
+</tr>
+<tr>
+<td>open-by-default</td>
+<td>Wether or not the popup should be open when the map is loaded</td>
+<td>defaults to <code>false</code></td>
+</tr>
+<tr>
+<td>icon</td>
+<td>Name of the icon to use</td>
+<td>if not set, the default icon will be used</td>
+</tr>
+</tbody>
+</table>
+<p>Any given text in the innerHTML of the marker element is displayed in the popup.</p>
+
+              <rv-bind-content>
+                <template>
+                  <rv-example-tabs handle="leaflet">
+                    <template title="Source" type="source"><pre><code class="language-html">&lt;leaflet-map initial-lat=&quot;53.860228&quot; initial-lng=&quot;8.592851&quot; initial-zoom=&quot;17&quot; tile-url=&quot;https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png&quot;&gt;
+  &lt;!-- Custom icons are also possible:
+  &lt;icon name=&quot;testIcon&quot; icon-url=&quot;test&quot; shadow-url=&quot;test&quot; icon-size=&quot;25, 41&quot; icon-anchor=&quot;14, 40&quot; popup-anchor=&quot;-1, -41&quot; shadow-size=&quot;25, 41&quot; shadow-anchor=&quot;10, 40&quot;&gt;&lt;/icon&gt;
+  &lt;marker icon=&quot;testIcon&quot; lat=&quot;53.860228&quot; lng=&quot;8.592851&quot; open-by-default=&quot;true&quot;&gt;Test&lt;/marker&gt;
+  --&gt;
+  &lt;marker lat=&quot;53.860228&quot; lng=&quot;8.592851&quot; open-by-default=&quot;true&quot;&gt;Test&lt;/marker&gt;
+&lt;/leaflet-map&gt;</code></pre>
+                    </template>
+                    <template title="Info" type="info"><p>None</p>
+
+                    </template>
+                  </rv-example-tabs>
+                </template>
+              </rv-bind-content>
+            </section>
+            <bs4-scrollspy class="d-none d-lg-block py-3 side-scrollspy scrollbar-primary-on-hover scrollbar-y-auto scrollbar-x-hidden" rv-scrollbar-draggable="rv-scrollbar-draggable" header-parent-selector="#main-container" headers-start="2" headers-depth="4" offset="200" offset-bottom="80" scroll-offset="80"></bs4-scrollspy>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

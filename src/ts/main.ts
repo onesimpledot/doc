@@ -16,6 +16,7 @@ import { Bs4TabsTplExampleComponent } from "./demos/bs4-tabs-tpl/src/ts/componen
 import { I18nStaticExampleComponent } from "./demos/i18n-static/src/ts/components/i18n-static-example/i18n-static-example.component";
 import { TouchEventsExampleComponent } from "./demos/extras-touch-events/src/ts/components/touch-events-example/touch-events-example.component";
 import { ExtrasScrollEventsExampleComponent } from "./demos/extras-scroll-events/src/ts/components/extras-scroll-events-example/extras-scroll-events-example.component";
+import { LeafletExampleComponent } from "./demos/leaflet-map/src/ts/components/leaflet-example/leaflet-example.component";
 
 import * as Prism from "prismjs";
 import "prismjs/components/prism-javascript";
@@ -51,6 +52,7 @@ export class Main {
       I18nStaticExampleComponent,
       TouchEventsExampleComponent,
       ExtrasScrollEventsExampleComponent,
+      LeafletExampleComponent
     });
 
     this.dispatcher.on("newPageReady", () => {

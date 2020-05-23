@@ -1,8 +1,16 @@
 If needed, one may use the `<leaflet-map>` component of riba to display a map. It embeds a preconfigured leaflet.js map, which can be altered trough the given template or via its parameters. 
 
+| argument | description | required |
+|---|---|---|
+| initial-lat | Latitude of the center of the map | :heavy_check_mark: |
+| initial-lng | Longitude of the center of the map | :heavy_check_mark: |
+| initial-zoom | Initial zoom of the map | no |
+| tile-url | Tile url for leaflet to use, can change the looks of the map | no |
+
+
 Currently there are two different html tags, the template may contain:
 
-`<icon>`:
+### `<icon>`:
 
 The icon element represents a custom icon that can be used by a marker in the map.
 
@@ -28,8 +36,8 @@ Available arguments are:
 
 | argument | description | required |
 |---|---|---|
-| lat |  | :heavy_check_mark: |
-| lng |  | :heavy_check_mark: |
+| lat | Latitude of the marker | :heavy_check_mark: |
+| lng | Longitude of the marker | :heavy_check_mark: |
 | open-by-default | Wether or not the popup should be open when the map is loaded | defaults to `false` |
 | icon | Name of the icon to use | if not set, the default icon will be used |
 
